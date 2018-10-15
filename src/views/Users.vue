@@ -1,6 +1,6 @@
 <template>
   <div class="users">
-    <UserList :users="list" />
+    <UserList :properties="properties" />
   </div>
 </template>
 
@@ -12,21 +12,53 @@ export default {
   name: 'users',
   data: function () {
     return {
-      list: [
-        {
-          id: 1,
-          name: 'hogehoge'
-        },
-        {
-          id: 2,
-          name: 'barbar'
-        }
-      ]
+      properties: {
+        loading: true,
+        users: function () { return [] },
+        error: null
+      }
     }
   },
+
+  created: function () {
+    this.fetchData()
+  },
+
+  watch: {
+    '$route': 'fetchData'
+  },
+
+  methods: {
+    fetchData: function () {
+      var self = this
+      getUsers(function (err, users) {
+        self.properties.loading = false
+        if (err) {
+          self.properties.error = err.toString()
+        } else {
+          self.properties.users = users
+        }
+      })
+    }
+  },
+
   components: {
     UserList
   }
 }
 
+function getUsers (callback) {
+  setTimeout(function () {
+    callback(null, [
+      {
+        id: 1,
+        name: 'hogehoge'
+      },
+      {
+        id: 2,
+        name: 'barbar'
+      }
+    ])
+  }, 1000 * 1)
+}
 </script>
