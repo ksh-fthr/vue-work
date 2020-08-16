@@ -8,10 +8,20 @@
 
 - master
   - このリポジトリのマスターです。基本的にいじりません。
-- feat_component_data
+- feature/#component_data
   - コンポーネントの親から子にデータを渡す処理を試す。
-- feat_buefy
+- feature/#buefy
   - UI コンポーネント「Buefy」を導入
+
+
+# Vue や Vue CLI のバージョン
+本リポジトリで扱っている Vue, Vue CLI のバージョンは以下のとおりです。
+
+|         | Version | 備考 |
+| ------- | ------- | ---- |
+| Vue     | 2.5.17  |      |
+| Vue CLI | 3.0.5   |      |
+
 
 # setup
 
