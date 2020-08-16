@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/users">User List</router-link> |
       <router-link to="/sample-buefy">Sample Buefy</router-link>
+      <router-link to="/life-cycle">Life Cycle</router-link>
     </div>
     <router-view/>
   </div>
