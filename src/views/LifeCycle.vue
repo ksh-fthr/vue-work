@@ -1,14 +1,16 @@
 <template>
   <div class="lifecycle">
-    <UserList :properties="properties" />
+    <LifeCycleVerification />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import UserList from '@/components/LifeCycleVerification.vue'
-
+import LifeCycleVerification from '@/components/LifeCycleVerification.vue'
 export default {
   name: 'lifecycle',
+  components: {
+    LifeCycleVerification
+  }
 }
 </script>

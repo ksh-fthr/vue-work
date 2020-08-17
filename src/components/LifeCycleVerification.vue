@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'LifeCycleVerification',
-  props: ['properties']
+  name: 'LifeCycleVerification'
 }
 </script>
