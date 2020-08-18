@@ -13,6 +13,7 @@
   "prettier.eslintIntegration": true,
   "prettier.semi": false,
   "prettier.singleQuote": true,
+  "peacock.color": "#42b883",
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#65c89b",
     "activityBar.activeBorder": "#945bc4",
@@ -29,5 +30,5 @@
     "titleBar.inactiveBackground": "#42b88399",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#42b883"
+  "peacock.remoteColor": "#42b883"
 }
