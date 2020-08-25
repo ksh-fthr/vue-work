@@ -1,19 +1,16 @@
 {
-  "editor.formatOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "prettier.eslintIntegration": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "peacock.color": "#42b883",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "eslint.enable": true,
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#65c89b",
     "activityBar.activeBorder": "#945bc4",
@@ -22,13 +19,13 @@
     "activityBar.inactiveForeground": "#15202b99",
     "activityBarBadge.background": "#945bc4",
     "activityBarBadge.foreground": "#e7e7e7",
-    "statusBar.background": "#42b883",
+    "statusBar.background": "#42b882",
     "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#359268",
-    "titleBar.activeBackground": "#42b883",
+    "statusBarItem.hoverBackground": "#359267",
+    "titleBar.activeBackground": "#42b882",
     "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveBackground": "#42b88399",
+    "titleBar.inactiveBackground": "#42b88299",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.remoteColor": "#42b883"
+  "peacock.remoteColor": "#42b882"
 }
