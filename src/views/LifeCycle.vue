@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "lifecycle",
-  data: function () {
+  name: 'Lifecycle',
+  data: function() {
     return {
       properties: {
-        sentence: "This page is life cycle lifecycle",
+        sentence: '',
       },
-    };
+    }
   },
 
   /* ################################ ライフサイクル ################################ */
@@ -21,7 +21,15 @@ export default {
    *
    * データの監視とイベント/ウォッチャのセットアップより前の、インスタンスが初期化されるときに同期的に呼ばれます。
    */
-  beforeCreate: function () {},
+  beforeCreate: function() {
+    try {
+      this.properties.sentence = 'LifeCycle: beforeCreated. Perhaps sentence is empty...'
+      console.log(`sentence is ${this.properties.sentence}`)
+    } catch (e) {
+      console.log(`[error]: ${e.message}`)
+      console.log('[error]: because of beforeCreate is called before instance do initialize.')
+    }
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#created) から拝借｡
@@ -31,14 +39,18 @@ export default {
    * オプションのセットアップ処理が完了したことを意味します。
    * しかしながら、マウンティングの段階は未開始で、`$el` プロパティはまだ利用できません。
    */
-  created: function () {},
+  created: function() {
+    this.properties.sentence =
+      'LifeCycle: created. Perhaps sentence is this sentence.'
+    console.log(`sentence is ${this.properties.sentence}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeMount) から拝借｡
    *
    * `render` 関数が初めて呼び出されようと、マウンティングが開始される直前に呼ばれます。
    */
-  beforeMount: function () {},
+  beforeMount: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#mounted) から拝借｡
@@ -51,7 +63,7 @@ export default {
    *
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  mounted: function () {},
+  mounted: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeUpdate) から拝借｡
@@ -63,7 +75,7 @@ export default {
    * このフックはサーバサイドレンダリングでは呼ばれません。
    * サーバサイドでは初期描画のみ実行されるためです。
    */
-  beforeUpdate: function () {},
+  beforeUpdate: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#updated) から拝借｡
@@ -77,7 +89,7 @@ export default {
    * [vm.$nextTick](https://jp.vuejs.org/v2/api/index.html#vm-nextTick) を使うことができます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  updated: function () {},
+  updated: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeDestroy) から拝借｡
@@ -87,7 +99,7 @@ export default {
    *
    * **このフックはサーバサイドレンダリングでは呼ばれません。**
    */
-  beforeDestroy: function () {},
+  beforeDestroy: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#destroyed) から拝借｡
@@ -98,7 +110,7 @@ export default {
    *
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  destroyed: function () {},
+  destroyed: function() {},
 
   /* ################################ オプション ################################ */
   /**
@@ -107,7 +119,7 @@ export default {
    * 生き続けたコンポーネントが活性化するとき呼ばれます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  activated: function () {},
+  activated: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#deactivated) から拝借｡
@@ -115,7 +127,7 @@ export default {
    * 生存し続けたコンポーネントが非活性化されるとき呼ばれます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  deactivated: function () {},
+  deactivated: function() {},
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#errorCaptured) から拝借｡
@@ -125,6 +137,6 @@ export default {
    * そしてどこでエラーが捕捉されたかの文字列情報、これら 3 つの引数を受け取ります。
    * フックはエラーがさらにもっと伝播するのを防ぐために、`false` を返すことができます。
    */
-  errorCaptured: function () {},
-};
+  errorCaptured: function() {},
+}
 </script>
