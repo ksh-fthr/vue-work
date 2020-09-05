@@ -1,6 +1,10 @@
 <template>
-  <div class="lifecycle">
-    <h1>{{ properties.sentence }}</h1>
+  <div :class="$style.lifecycle">
+    <input
+      v-model="properties.messsage"
+      :class="$style.messsage"
+      placeholder="edit me">
+    <p>Message is: {{ properties.messsage }}</p>
   </div>
 </template>
 
@@ -10,7 +14,7 @@ export default {
   data: function() {
     return {
       properties: {
-        sentence: '',
+        messsage: 'default value.',
       },
     }
   },
@@ -23,11 +27,11 @@ export default {
    */
   beforeCreate: function() {
     try {
-      this.properties.sentence = 'LifeCycle: beforeCreated. Perhaps sentence is empty...'
-      console.log(`sentence is ${this.properties.sentence}`)
+      this.properties.messsage = 'set value on beforeCreate.'
+      console.log(`messsage is ${this.properties.messsage}`)
     } catch (e) {
-      console.log(`[error]: ${e.message}`)
-      console.log('[error]: because of beforeCreate is called before instance do initialize.')
+      console.log(`[error]: in beforeCreate, ${e.message}`)
+      console.log('[error]: in beforeCreate, because of beforeCreate is called before instance do initialize.')
     }
   },
 
@@ -40,9 +44,8 @@ export default {
    * しかしながら、マウンティングの段階は未開始で、`$el` プロパティはまだ利用できません。
    */
   created: function() {
-    this.properties.sentence =
-      'LifeCycle: created. Perhaps sentence is this sentence.'
-    console.log(`sentence is ${this.properties.sentence}`)
+    this.properties.messsage = 'set value on created.'
+    console.log(`[LifeCycle] created. this.properties.messsage = ${this.properties.messsage}`)
   },
 
   /**
@@ -50,7 +53,9 @@ export default {
    *
    * `render` 関数が初めて呼び出されようと、マウンティングが開始される直前に呼ばれます。
    */
-  beforeMount: function() {},
+  beforeMount: function() {
+    console.log(`[LifeCycle] beforeMount. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#mounted) から拝借｡
@@ -63,7 +68,9 @@ export default {
    *
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  mounted: function() {},
+  mounted: function() {
+    console.log(`[LifeCycle] mounted. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeUpdate) から拝借｡
@@ -75,7 +82,11 @@ export default {
    * このフックはサーバサイドレンダリングでは呼ばれません。
    * サーバサイドでは初期描画のみ実行されるためです。
    */
-  beforeUpdate: function() {},
+  beforeUpdate: function() {
+    // 注意!!
+    // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
+    console.log(`[LifeCycle] beforeUpdate. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#updated) から拝借｡
@@ -89,7 +100,11 @@ export default {
    * [vm.$nextTick](https://jp.vuejs.org/v2/api/index.html#vm-nextTick) を使うことができます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  updated: function() {},
+  updated: function() {
+    // 注意!!
+    // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
+    console.log(`[LifeCycle] updated. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeDestroy) から拝借｡
@@ -99,7 +114,9 @@ export default {
    *
    * **このフックはサーバサイドレンダリングでは呼ばれません。**
    */
-  beforeDestroy: function() {},
+  beforeDestroy: function() {
+    console.log(`[LifeCycle] beforeDestroy. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#destroyed) から拝借｡
@@ -110,7 +127,9 @@ export default {
    *
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  destroyed: function() {},
+  destroyed: function() {
+    console.log(`[LifeCycle] destroyed. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /* ################################ オプション ################################ */
   /**
@@ -119,7 +138,10 @@ export default {
    * 生き続けたコンポーネントが活性化するとき呼ばれます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  activated: function() {},
+  activated: function() {
+    // TODO: このフックがどう動くのか､別ブランチで検証する
+    console.log(`[optional] activated. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#deactivated) から拝借｡
@@ -127,7 +149,10 @@ export default {
    * 生存し続けたコンポーネントが非活性化されるとき呼ばれます。
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
-  deactivated: function() {},
+  deactivated: function() {
+    // TODO: このフックがどう動くのか､別ブランチで検証する
+    console.log(`[optional] deactivated. this.properties.messsage = ${this.properties.messsage}`)
+  },
 
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#errorCaptured) から拝借｡
@@ -137,6 +162,19 @@ export default {
    * そしてどこでエラーが捕捉されたかの文字列情報、これら 3 つの引数を受け取ります。
    * フックはエラーがさらにもっと伝播するのを防ぐために、`false` を返すことができます。
    */
-  errorCaptured: function() {},
+  errorCaptured: function() {
+    // TODO: このフックがどう動くのか､別ブランチで検証する
+    console.log(`[optional] errorCaptured. this.properties.messsage = ${this.properties.messsage}`)
+  },
 }
 </script>
+
+<style module>
+.lifecycle {
+    margin: 20px;
+}
+
+.messsage {
+    width: 400px;
+}
+</style>
