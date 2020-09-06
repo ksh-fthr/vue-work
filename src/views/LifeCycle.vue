@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.lifecycle">
     <input
-      v-model="properties.messsage"
-      :class="$style.messsage"
+      v-model="properties.message"
+      :class="$style.message"
       placeholder="edit me">
-    <p>Message is: {{ properties.messsage }}</p>
+    <p>Message is: {{ properties.message }}</p>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   data: function() {
     return {
       properties: {
-        messsage: 'default value.',
+        message: 'default value.',
       },
     }
   },
@@ -27,11 +27,10 @@ export default {
    */
   beforeCreate: function() {
     try {
-      this.properties.messsage = 'set value on beforeCreate.'
-      console.log(`messsage is ${this.properties.messsage}`)
+      this.properties.message = 'set value on beforeCreate.'
+      console.log(`message is ${this.properties.message}`)
     } catch (e) {
-      console.log(`[error]: in beforeCreate, ${e.message}`)
-      console.log('[error]: in beforeCreate, because of beforeCreate is called before instance do initialize.')
+      console.log(e)
     }
   },
 
@@ -44,8 +43,8 @@ export default {
    * しかしながら、マウンティングの段階は未開始で、`$el` プロパティはまだ利用できません。
    */
   created: function() {
-    this.properties.messsage = 'set value on created.'
-    console.log(`[LifeCycle] created. this.properties.messsage = ${this.properties.messsage}`)
+    this.properties.message = 'set value on created.'
+    console.log(`[LifeCycle] created. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -54,7 +53,8 @@ export default {
    * `render` 関数が初めて呼び出されようと、マウンティングが開始される直前に呼ばれます。
    */
   beforeMount: function() {
-    console.log(`[LifeCycle] beforeMount. this.properties.messsage = ${this.properties.messsage}`)
+    this.properties.message = 'set value on beforeMount.'
+    console.log(`[LifeCycle] beforeMount. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -69,7 +69,8 @@ export default {
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
   mounted: function() {
-    console.log(`[LifeCycle] mounted. this.properties.messsage = ${this.properties.messsage}`)
+    this.properties.message = 'set value on mounted.'
+    console.log(`[LifeCycle] mounted. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -85,7 +86,7 @@ export default {
   beforeUpdate: function() {
     // 注意!!
     // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
-    console.log(`[LifeCycle] beforeUpdate. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[LifeCycle] beforeUpdate. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -103,7 +104,7 @@ export default {
   updated: function() {
     // 注意!!
     // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
-    console.log(`[LifeCycle] updated. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[LifeCycle] updated. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -115,7 +116,7 @@ export default {
    * **このフックはサーバサイドレンダリングでは呼ばれません。**
    */
   beforeDestroy: function() {
-    console.log(`[LifeCycle] beforeDestroy. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[LifeCycle] beforeDestroy. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -128,7 +129,7 @@ export default {
    * このフックはサーバサイドレンダリングでは呼ばれません。
    */
   destroyed: function() {
-    console.log(`[LifeCycle] destroyed. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[LifeCycle] destroyed. this.properties.message = ${this.properties.message}`)
   },
 
   /* ################################ オプション ################################ */
@@ -140,7 +141,7 @@ export default {
    */
   activated: function() {
     // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] activated. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[optional] activated. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -151,7 +152,7 @@ export default {
    */
   deactivated: function() {
     // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] deactivated. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[optional] deactivated. this.properties.message = ${this.properties.message}`)
   },
 
   /**
@@ -164,7 +165,7 @@ export default {
    */
   errorCaptured: function() {
     // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] errorCaptured. this.properties.messsage = ${this.properties.messsage}`)
+    console.log(`[optional] errorCaptured. this.properties.message = ${this.properties.message}`)
   },
 }
 </script>
@@ -174,7 +175,7 @@ export default {
     margin: 20px;
 }
 
-.messsage {
+.message {
     width: 400px;
 }
 </style>
