@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Users from './views/Users.vue'
 import About from './views/About.vue'
 import SampleBuefy from './views/SampleBuefy.vue'
+import LifeCycle from './views/LifeCycle.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/sample-buefy',
       name: 'samle-buefy',
       component: SampleBuefy
+    },
+    {
+      path: '/life-cycle',
+      name: 'llfe-cycle',
+      component: LifeCycle 
     }
   ]
 })
