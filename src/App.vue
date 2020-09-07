@@ -15,6 +15,9 @@
       </router-link> |
       <router-link to="/life-cycle">
         Life Cycle
+      </router-link> |
+      <router-link to="/life-cycle2">
+        Life Cycle2
       </router-link>
     </div>
     <router-view />
