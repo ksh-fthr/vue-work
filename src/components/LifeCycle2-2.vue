@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'LifeCyle22',
+  name: 'LifeCycle22',
   data: function() {
     return {
       properties: {

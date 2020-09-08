@@ -112,8 +112,12 @@ export default {
    * そしてどこでエラーが捕捉されたかの文字列情報、これら 3 つの引数を受け取ります。
    * フックはエラーがさらにもっと伝播するのを防ぐために、`false` を返すことができます。
    */
-  errorCaptured: function() {
+  errorCaptured: function(error, component, info) {
     console.log('[LifeCycle2] errorCaptured.')
+    console.log(error)
+    console.log(component)
+    console.log(info)
+    return false
   }, 
 }
 </script>

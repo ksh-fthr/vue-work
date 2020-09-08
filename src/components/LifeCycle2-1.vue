@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'LifeCyle21',
+  name: 'LifeCycle21',
   data: function() {
     return {
       properties: {
@@ -22,6 +22,11 @@ export default {
   },
 
   /* ################################ ライフサイクル ################################ */
+  // beforeCreate: function() {
+  //   // わざと例外を発生させて､
+  //   // 親コンポーネントである LifeCycle2.vue の `errorCaptured()` のフックに引っ掛けたい
+  //   this.properties.message = 'set on beforeCreate.'
+  // },
   /**
    * [公式](https://jp.vuejs.org/v2/api/index.html#beforeDestroy) から拝借｡
    *
