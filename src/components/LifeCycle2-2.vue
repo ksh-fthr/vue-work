@@ -3,17 +3,21 @@
     <p>input on LifeCycle22.</p>
     <input
       :class="$style.message"
+      v-model="properties.message"
       placeholder="edit me">
+  
+    <p>Message is: {{ properties.message }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'LifeCyle22',
-  props: {
-    properties: {
-      type: Object,
-      default: null
+  data: function() {
+    return {
+      properties: {
+        message: 'default value.',
+      },
     }
   },
 

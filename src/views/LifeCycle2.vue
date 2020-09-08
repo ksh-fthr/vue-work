@@ -41,9 +41,6 @@ export default {
   data: function() {
     return {
       selectedComponent: '',
-      properties: {
-        message: 'default value.',
-      },
     }
   },
 
@@ -61,7 +58,7 @@ export default {
   beforeUpdate: function() {
     // 注意!!
     // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
-    console.log(`[LifeCycle2] beforeUpdate. this.properties.message = ${this.properties.message}`)
+    console.log('[LifeCycle2] beforeUpdate.')
   },
 
   /**
@@ -79,7 +76,32 @@ export default {
   updated: function() {
     // 注意!!
     // beforeUpdate と updated で同じ変数に対してデータを更新かけると無限ループに陥る
-    console.log(`[LifeCycle2] updated. this.properties.message = ${this.properties.message}`)
+    console.log('[LifeCycle2] updated.')
+  },
+
+  /**
+   * [公式](https://jp.vuejs.org/v2/api/index.html#beforeDestroy) から拝借｡
+   *
+   * > Vue インスタンスが破棄される直前に呼ばれます。
+   * この段階ではインスタンスはまだ完全に機能しています。
+   *
+   * **このフックはサーバサイドレンダリングでは呼ばれません。**
+   */
+  beforeDestroy: function() {
+    console.log('[LifeCycle2] beforeDestroy.')
+  },
+
+  /**
+   * [公式](https://jp.vuejs.org/v2/api/index.html#destroyed) から拝借｡
+   *
+   * Vue インスタンスが破棄された後に呼ばれます。
+   * このフックが呼ばれるとき、Vue インスタンスの全てのディレクティブはバウンドしておらず、
+   * 全てのイベントリスナは削除されており、そして全ての子の Vue インスタンスは破棄されています。
+   *
+   * このフックはサーバサイドレンダリングでは呼ばれません。
+   */
+  destroyed: function() {
+    console.log('[LifeCycle2] destroyed.')
   },
 
   /**
@@ -91,7 +113,7 @@ export default {
    * フックはエラーがさらにもっと伝播するのを防ぐために、`false` を返すことができます。
    */
   errorCaptured: function() {
-    console.log(`[LifeCycle2] errorCaptured. this.properties.message = ${this.properties.message}`)
+    console.log('[LifeCycle2] errorCaptured.')
   }, 
 }
 </script>
@@ -111,9 +133,5 @@ export default {
     margin-top: 20px;
     height: 200px;
     width: 100%;
-}
-
-.message {
-    width: 400px;
 }
 </style>
