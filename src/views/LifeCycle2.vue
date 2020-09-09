@@ -1,18 +1,18 @@
 <template>
   <div :class="$style.lifecycle2">
     <div :class="$style.wrapchild">
-      <input 
-        id="Lifecycle21" 
-        v-model="selectedComponent" 
-        type="radio" 
+      <input
+        id="Lifecycle21"
+        v-model="selectedComponent"
+        type="radio"
         value="Lifecycle21">
       <label for="Lifecycle21">Lifecycle21</label>
     </div>
     <div :class="$style.wrapchild">
-      <input 
+      <input
         id="Lifecycle22"
-        v-model="selectedComponent" 
-        type="radio" 
+        v-model="selectedComponent"
+        type="radio"
         value="Lifecycle22">
       <label for="Lifecycle22">Lifecycle22</label>
     </div>
@@ -20,11 +20,10 @@
     <h1>selected component is ... {{ selectedComponent }}.</h1>
 
     <keep-alive>
-      <component 
-        :is="selectedComponent" 
-        :class="$style.lifecycle2_child_area"/>
+      <component
+        :is="selectedComponent"
+        :class="$style.lifecycle2_child_area" />
     </keep-alive>
-
   </div>
 </template>
 
@@ -117,8 +116,11 @@ export default {
     console.log(error)
     console.log(component)
     console.log(info)
+
+    // エラーの伝播を防ぐために、`false` を返す
+    // つまり更に上の親へエラーをあげることはせずに､ここで止める
     return false
-  }, 
+  },
 }
 </script>
 
