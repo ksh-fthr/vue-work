@@ -131,42 +131,6 @@ export default {
   destroyed: function() {
     console.log(`[LifeCycle] destroyed. this.properties.message = ${this.properties.message}`)
   },
-
-  /* ################################ オプション ################################ */
-  /**
-   * [公式](https://jp.vuejs.org/v2/api/index.html#activated) から拝借｡
-   *
-   * 生き続けたコンポーネントが活性化するとき呼ばれます。
-   * このフックはサーバサイドレンダリングでは呼ばれません。
-   */
-  activated: function() {
-    // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] activated. this.properties.message = ${this.properties.message}`)
-  },
-
-  /**
-   * [公式](https://jp.vuejs.org/v2/api/index.html#deactivated) から拝借｡
-   *
-   * 生存し続けたコンポーネントが非活性化されるとき呼ばれます。
-   * このフックはサーバサイドレンダリングでは呼ばれません。
-   */
-  deactivated: function() {
-    // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] deactivated. this.properties.message = ${this.properties.message}`)
-  },
-
-  /**
-   * [公式](https://jp.vuejs.org/v2/api/index.html#errorCaptured) から拝借｡
-   *
-   * 任意の子孫コンポーネントからエラーが捕捉されるときに呼び出されます。
-   * フックは、エラー、エラーをトリガするコンポーネントインスタンス、
-   * そしてどこでエラーが捕捉されたかの文字列情報、これら 3 つの引数を受け取ります。
-   * フックはエラーがさらにもっと伝播するのを防ぐために、`false` を返すことができます。
-   */
-  errorCaptured: function() {
-    // TODO: このフックがどう動くのか､別ブランチで検証する
-    console.log(`[optional] errorCaptured. this.properties.message = ${this.properties.message}`)
-  },
 }
 </script>
 

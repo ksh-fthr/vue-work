@@ -6,14 +6,17 @@
 
 基本的にそのとき確認した内容ごとにブランチを切ります。 現在は次のブランチがあります。
 
-- master
+- [master](https://github.com/ksh-fthr/vue-work/tree/master)
   - このリポジトリのマスターです。基本的にいじりません
-- feature/#component_data
+  - 他のブランチからのマージのみ行われます
+- [feature/#component_data](https://github.com/ksh-fthr/vue-work/tree/feature/%23component_data)
   - コンポーネントの親から子にデータを渡す処理を試す
-- feature/#buefy
+- [feature/#buefy](https://github.com/ksh-fthr/vue-work/tree/feature/%23buefy)
   - UI コンポーネント「Buefy」を導入し、モーダルダイアログを検証します
-- feature/#life_cycle
+- [feature/#life_cycle](https://github.com/ksh-fthr/vue-work/tree/feature/%23life_cycle)
   - ライフサイクルを検証します
+- [feature/#life_cycle2](https://github.com/ksh-fthr/vue-work/tree/feature/%23life_cycle2)
+  - 動的コンポーネントと `feature/#life_cycle` で扱わなかったライフサイクルを検証します
 
 
 # Vue や Vue CLI のバージョン
