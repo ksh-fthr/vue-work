@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.lifecycle2">
+  <div :class="$style.component">
     <div :class="$style.wrapchild">
       <input
         id="Lifecycle21"
@@ -125,9 +125,8 @@ export default {
 </script>
 
 <style module>
-.lifecycle2 {
-    height: 100%;
-    width: 100%;
+.component {
+  margin-top: 50px;
 }
 
 .wrapchild {

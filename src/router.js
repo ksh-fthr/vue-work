@@ -6,6 +6,7 @@ import About from './views/About.vue'
 import SampleBuefy from './views/SampleBuefy.vue'
 import LifeCycle from './views/LifeCycle.vue'
 import LifeCycle2 from './views/LifeCycle2.vue'
+import Routing from './views/Routing.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/life-cycle2',
       name: 'llfe-cycle2',
       component: LifeCycle2 
+    },
+    {
+      path: '/routing',
+      name: 'routing',
+      component: Routing 
     }
   ]
 })

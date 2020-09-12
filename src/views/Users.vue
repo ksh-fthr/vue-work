@@ -1,5 +1,5 @@
 <template>
-  <div class="users">
+  <div :class="$style.component">
     <UserList :properties="properties" />
   </div>
 </template>
@@ -62,3 +62,9 @@ function getUsers (callback) {
   }, 1000 * 1)
 }
 </script>
+
+<style module>
+.component {
+  margin-top: 50px;
+}
+</style>
