@@ -4,13 +4,41 @@
       id="nav" 
       class="tab-area-base">
       <ul class="tab-menu-base">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/users">User List</router-link></li>
-        <li><router-link to="/sample-buefy">Sample Buefy</router-link></li>
-        <li><router-link to="/life-cycle">Life Cycle</router-link></li>
-        <li><router-link to="/life-cycle2">Life Cycle2</router-link></li>
-        <li><router-link to="/routing">Rounting Test</router-link></li>
+        <li>
+          <router-link to="/">
+            Home
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/about">
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/users">
+            User List
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/sample-buefy">
+            Sample Buefy
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/life-cycle">
+            Life Cycle
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/life-cycle2">
+            Life Cycle2
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/routing">
+            Rounting Test
+          </router-link>
+        </li>
       </ul>
     </div>
     <router-view />
@@ -38,7 +66,7 @@ h1 {
 
 div.tab-area-base {
   height: 0px;
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
@@ -47,13 +75,15 @@ ul.tab-menu-base {
   list-style: none;
   margin: 0px auto;
   padding: 0;
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(200, 200, 200);
 }
 
 ul.tab-menu-base li {
   float: left;
   margin: 0px 1px 0 0 ;
   padding: 0;
-  background: rgb(241, 240, 240);
+  background: rgb(240, 240, 240);
   border-radius: 10px 10px 0 0;
   height: 100%;
   width: 130px;
