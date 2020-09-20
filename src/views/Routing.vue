@@ -4,6 +4,7 @@
       <div :class="$style.child">
         <h1>Routing Test Page</h1>
       </div>
+      <h2>{{ $route.params.message }}</h2>
     </div>
   </div>
 </template>

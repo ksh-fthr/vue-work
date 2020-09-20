@@ -35,7 +35,17 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/routing">
+          <router-link :to="{ name: 'routing'}">
+            Rounting Test
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'routing'}">
+            Rounting Test
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'routing', params: {id: 1}}">
             Rounting Test
           </router-link>
         </li>

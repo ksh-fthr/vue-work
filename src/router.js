@@ -48,6 +48,11 @@ export default new Router({
       path: '/routing',
       name: 'routing',
       component: Routing 
+    },
+    {
+      path: '/routing/:id',
+      name: 'routing',
+      component: Routing 
     }
   ]
 })
