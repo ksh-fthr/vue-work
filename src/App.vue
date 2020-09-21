@@ -15,11 +15,6 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/users">
-            User List
-          </router-link>
-        </li>
-        <li>
           <router-link to="/sample-buefy">
             Sample Buefy
           </router-link>
@@ -35,18 +30,13 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'routing'}">
-            Rounting Test
+          <router-link to="/users">
+            User List
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'routing'}">
-            Rounting Test
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'routing', params: {id: 1}}">
-            Rounting Test
+          <router-link :to="{ name: 'user-detail', params: {id: 1}}">
+            UserDetail
           </router-link>
         </li>
       </ul>
@@ -63,6 +53,20 @@ html, body {
 
 h1 {
   font-size: 36px;
+}
+
+tr, td, th {
+  padding: 5px 0px;
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(185, 180, 180);
+}
+
+tr:last-child, td {
+  border-bottom:none;
+}
+
+tr:nth-child(even){
+    background:rgb(250, 250, 250);
 }
 
 #app {
