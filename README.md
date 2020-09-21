@@ -10,14 +10,15 @@
   - このリポジトリのマスターです。基本的にいじりません
   - 他のブランチからのマージのみ行われます
 - [feature/#component_data](https://github.com/ksh-fthr/vue-work/tree/feature/%23component_data)
-  - コンポーネントの親から子にデータを渡す処理を試す
+  - コンポーネントの親から子にデータを渡す処理を検証します
 - [feature/#buefy](https://github.com/ksh-fthr/vue-work/tree/feature/%23buefy)
   - UI コンポーネント「Buefy」を導入し、モーダルダイアログを検証します
 - [feature/#life_cycle](https://github.com/ksh-fthr/vue-work/tree/feature/%23life_cycle)
   - ライフサイクルを検証します
 - [feature/#life_cycle2](https://github.com/ksh-fthr/vue-work/tree/feature/%23life_cycle2)
   - 動的コンポーネントと `feature/#life_cycle` で扱わなかったライフサイクルを検証します
-
+- [feature/#routing](https://github.com/ksh-fthr/vue-work/pull/new/feature/%23routing)
+  - ルーティングについて検証します
 
 # Vue や Vue CLI のバージョン
 本リポジトリで扱っている Vue, Vue CLI のバージョンは以下のとおりです。

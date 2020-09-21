@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.lifecycle">
+  <div :class="$style.component">
     <input
       v-model="properties.message"
       :class="$style.message"
@@ -135,8 +135,8 @@ export default {
 </script>
 
 <style module>
-.lifecycle {
-    margin: 20px;
+.component {
+  margin-top: 50px;
 }
 
 .message {

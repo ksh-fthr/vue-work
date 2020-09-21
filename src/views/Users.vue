@@ -1,5 +1,5 @@
 <template>
-  <div class="users">
+  <div :class="$style.component">
     <UserList :properties="properties" />
   </div>
 </template>
@@ -9,28 +9,32 @@
 import UserList from '@/components/UserList.vue'
 
 export default {
-  name: 'users',
+  name: 'Users',
+
+  components: {
+    UserList
+  },
   data: function () {
     return {
       properties: {
         loading: true,
-        users: function () { return [] },
+        users: [],
         error: null
       }
     }
-  },
-
-  created: function () {
-    this.fetchData()
   },
 
   watch: {
     '$route': 'fetchData'
   },
 
+  created: function () {
+    this.fetchData()
+  },
+
   methods: {
     fetchData: function () {
-      var self = this
+      let self = this
       getUsers(function (err, users) {
         self.properties.loading = false
         if (err) {
@@ -40,10 +44,6 @@ export default {
         }
       })
     }
-  },
-
-  components: {
-    UserList
   }
 }
 
@@ -52,13 +52,51 @@ function getUsers (callback) {
     callback(null, [
       {
         id: 1,
-        name: 'hogehoge'
+        name: 'hogehoge',
+        live: 'Japan Tokyo',
+        phone: 'NNN-XXXX-HHHH',
+        gender: 'male',
+        mail: 'hogehoge@mail.com'
       },
       {
         id: 2,
-        name: 'barbar'
+        name: 'barbar',
+        live: 'Japan Kanagawa',
+        phone: 'NNN-XXXX-BBBB',
+        gender: 'male',
+        mail: 'barbar@mail.com'
+      },
+      {
+        id: 3,
+        name: 'piypiyo',
+        live: 'Japan Kanagawa',
+        phone: 'NNN-XXXX-PPPP',
+        gender: 'female',
+        mail: 'piypiyo@mail.com'
+      },
+      {
+        id: 4,
+        name: 'fugafuga',
+        live: 'Japan Chiba',
+        phone: 'NNN-XXXX-FFFF',
+        gender: 'male',
+        mail: 'fugafuga@mail.com'
+      },
+      {
+        id: 5,
+        name: 'varvar',
+        live: 'Japan Saitama',
+        phone: 'NNN-XXXX-VVVV',
+        gender: 'female',
+        mail: 'varvar@mail.com'
       }
     ])
   }, 1000 * 1)
 }
 </script>
+
+<style module>
+.component {
+  margin-top: 50px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="sample-buefy">
+  <div :class="$style.component">
     <BuefyParts/>
   </div>
 </template>
@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style module>
+.component {
+  margin-top: 50px;
+}
+</style>
