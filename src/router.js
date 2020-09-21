@@ -7,6 +7,7 @@ import SampleBuefy from './views/SampleBuefy.vue'
 import LifeCycle from './views/LifeCycle.vue'
 import LifeCycle2 from './views/LifeCycle2.vue'
 import UserDetail from './views/UserDetail.vue'
+import Routing from './views/Routing.vue'
 
 Vue.use(Router)
 
@@ -20,6 +21,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/routing',
+      name: 'routing',
+      component: Routing 
     },
     {
       path: '/about',
@@ -50,6 +56,6 @@ export default new Router({
       path: '/users/:id',
       name: 'user-detail',
       component: UserDetail 
-    }
+    },
   ]
 })
