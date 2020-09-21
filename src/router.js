@@ -11,6 +11,8 @@ import UserDetail from './views/UserDetail.vue'
 Vue.use(Router)
 
 export default new Router({
+  // デフォルトの挙動では URL に `#` が含まれる.
+  // URL から hash を取り除くには `mode:history` を指定する
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [

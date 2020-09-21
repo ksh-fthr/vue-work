@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import router from '../router'
-
 export default {
   name: 'UserList',
   props: {
@@ -75,7 +73,7 @@ export default {
       }
       const selected = this.selected
       alert('Page will be change...')
-      router.push({ name: 'user-detail', params: {id: selected['id']}})
+      this.$router.push({ name: 'user-detail', params: {id: selected['id']}})
     }
   }
 }
