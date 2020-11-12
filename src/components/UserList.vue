@@ -1,17 +1,9 @@
 <template>
   <div>
     <h1>This page is user list.</h1>
-    <div
-      v-if="properties.loading"
-      :class="$style.loading">
-      Loading Now...
-    </div>
-    <div
-      v-if="properties.error"
-      :class="$style.error">
-      {{ error }}
-    </div>
     <div :class="$style.userlist">
+      <!-- Buefy のテーブルを使って実現 -->
+      <!-- https://buefy.org/documentation/table/ -->
       <b-table
         :data="properties.users"
         :columns="columns"
@@ -40,7 +32,9 @@ export default {
   },
   data: function() {
     return { 
-      selected: this.properties.users[0],
+      // `selected`, `columns` は Buefy のテーブルを使用する際に必要なパラメータ
+      // https://buefy.org/documentation/table/
+      selected: null,
       columns: [
         {
           field: 'id',
@@ -72,8 +66,12 @@ export default {
         return false
       }
       const selected = this.selected
-      alert('Page will be change...')
-      this.$router.push({ name: 'user-detail', params: {id: selected['id']}})
+      this.$router.push({
+        name: 'user-detail',
+        params: {
+          id: selected['id']
+        }
+      })
     }
   }
 }
