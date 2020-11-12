@@ -10,6 +10,7 @@
         <th :class="$style.value">
           VALUE
         </th>
+        <!-- users のリストにアクセスする際、インデックスは 0 からなので受け取った id の値から `-1` する -->
         <tr
           v-for="(value, name) in users[$route.params.id - 1]"
           :key="name">
@@ -29,6 +30,8 @@
 export default {
   name: 'UserDetail',
   data: function () {
+    // 返却するオブジェクト users は本コンポーネントで表示するユーザ情報
+    // 本来ならば DB 等で保持するのだが、今回は記事用のサンプルコードということでリストで持たせている
     return {
       users: [
         {

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+// @ を指定することで `/src` の代替となる
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {

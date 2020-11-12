@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+// @ を指定することで `/src` の代替となる
 import UserList from '@/components/UserList.vue'
 
 export default {
@@ -15,83 +15,55 @@ export default {
     UserList
   },
   data: function () {
+    // ここで返却するデータは子コンポーネント `UserList.vue` で表示するユーザ情報
+    // 本来ならば DB 等で保持するのだが、今回は記事用のサンプルコードということでリストで持たせている
     return {
       properties: {
-        loading: true,
-        users: [],
-        error: null
+        users: [
+          {
+            id: 1,
+            name: 'hogehoge',
+            live: 'Japan Tokyo',
+            phone: 'NNN-XXXX-HHHH',
+            gender: 'male',
+            mail: 'hogehoge@mail.com'
+          },
+          {
+            id: 2,
+            name: 'barbar',
+            live: 'Japan Kanagawa',
+            phone: 'NNN-XXXX-BBBB',
+            gender: 'male',
+            mail: 'barbar@mail.com'
+          },
+          {
+            id: 3,
+            name: 'piypiyo',
+            live: 'Japan Kanagawa',
+            phone: 'NNN-XXXX-PPPP',
+            gender: 'female',
+            mail: 'piypiyo@mail.com'
+          },
+          {
+            id: 4,
+            name: 'fugafuga',
+            live: 'Japan Chiba',
+            phone: 'NNN-XXXX-FFFF',
+            gender: 'male',
+            mail: 'fugafuga@mail.com'
+          },
+          {
+            id: 5,
+            name: 'varvar',
+            live: 'Japan Saitama',
+            phone: 'NNN-XXXX-VVVV',
+            gender: 'female',
+            mail: 'varvar@mail.com'
+          }
+        ]
       }
-    }
-  },
-
-  watch: {
-    '$route': 'fetchData'
-  },
-
-  created: function () {
-    this.fetchData()
-  },
-
-  methods: {
-    fetchData: function () {
-      let self = this
-      getUsers(function (err, users) {
-        self.properties.loading = false
-        if (err) {
-          self.properties.error = err.toString()
-        } else {
-          self.properties.users = users
-        }
-      })
     }
   }
-}
-
-function getUsers (callback) {
-  setTimeout(function () {
-    callback(null, [
-      {
-        id: 1,
-        name: 'hogehoge',
-        live: 'Japan Tokyo',
-        phone: 'NNN-XXXX-HHHH',
-        gender: 'male',
-        mail: 'hogehoge@mail.com'
-      },
-      {
-        id: 2,
-        name: 'barbar',
-        live: 'Japan Kanagawa',
-        phone: 'NNN-XXXX-BBBB',
-        gender: 'male',
-        mail: 'barbar@mail.com'
-      },
-      {
-        id: 3,
-        name: 'piypiyo',
-        live: 'Japan Kanagawa',
-        phone: 'NNN-XXXX-PPPP',
-        gender: 'female',
-        mail: 'piypiyo@mail.com'
-      },
-      {
-        id: 4,
-        name: 'fugafuga',
-        live: 'Japan Chiba',
-        phone: 'NNN-XXXX-FFFF',
-        gender: 'male',
-        mail: 'fugafuga@mail.com'
-      },
-      {
-        id: 5,
-        name: 'varvar',
-        live: 'Japan Saitama',
-        phone: 'NNN-XXXX-VVVV',
-        gender: 'female',
-        mail: 'varvar@mail.com'
-      }
-    ])
-  }, 1000 * 1)
 }
 </script>
 
