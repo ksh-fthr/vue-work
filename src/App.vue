@@ -51,7 +51,7 @@
 </template>
 
 <style>
-html, body {
+html {
   height: 100%;
   width: 100%;
 }
@@ -114,3 +114,4 @@ ul.tab-menu-base li.current {
   background: rgb(240, 240, 240);
 }
 </style>
+

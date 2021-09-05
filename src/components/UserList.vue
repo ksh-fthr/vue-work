@@ -106,3 +106,4 @@ export default {
   border-collapse: collapse;
 }
 </style>
+
