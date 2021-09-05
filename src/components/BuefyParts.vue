@@ -1,33 +1,39 @@
 <template>
   <div>
     <h1>This page is sample page of Buefy Parts.</h1>
-    <div id="app" class="container">
+    <div 
+      id="app" 
+      class="container">
       <b-field label="Select a date">
         <b-datepicker
           placeholder="Click to select..."
-          icon="calendar-today">
-        </b-datepicker>
+          icon="calendar-today"/>
       </b-field>
     </div>
-    <div id="app" class="container">
-        <section>
-            <button class="button is-primary is-medium"
-                @click="isComponentModalActive = true">
-                Launch component modal
-            </button>
+    <div 
+      id="app" 
+      class="container">
+      <section>
+        <button 
+          class="button is-primary is-medium"
+          @click="isComponentModalActive = true">
+          Launch component modal
+        </button>
 
-            <b-modal :active.sync="isComponentModalActive" has-modal-card>
-                <modal-form v-bind="formProps"></modal-form>
-            </b-modal>
-        </section>
+        <b-modal 
+          :active.sync="isComponentModalActive" 
+          has-modal-card>
+          <modal-form v-bind="formProps"/>
+        </b-modal>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
 const ModalForm = {
-    props: ['email', 'password'],
-    template: `
+  props: ['email', 'password'],
+  template: `
         <form action="">
             <div class="modal-card" style="width: auto">
                 <header class="modal-card-head">
@@ -66,16 +72,16 @@ const ModalForm = {
 
 export default {
   components: {
-      ModalForm
+    ModalForm
   },
   data() {
-      return {
-          isComponentModalActive: false,
-          formProps: {
-              email: 'evan@you.com',
-              password: 'testing'
-          }
+    return {
+      isComponentModalActive: false,
+      formProps: {
+        email: 'evan@you.com',
+        password: 'testing'
       }
+    }
   }
 }
 </script>

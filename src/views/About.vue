@@ -9,7 +9,7 @@
 import Collapse from '@/components/Collapse'
 
 export default {
-  name: 'about',
+  name: 'About',
   components: {
     Collapse
   }

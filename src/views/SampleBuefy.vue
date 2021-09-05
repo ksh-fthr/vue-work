@@ -8,7 +8,7 @@
 import BuefyParts from '@/components/BuefyParts'
 
 export default {
-  name: 'sample-buefy',
+  name: 'SampleBuefy',
   components: {
     BuefyParts
   }
