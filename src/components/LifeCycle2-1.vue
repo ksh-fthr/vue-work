@@ -2,8 +2,8 @@
   <div :class="$style.lifecycle2_child">
     <p>input on LifeCycle21.</p>
     <input
-      :class="$style.message"
       v-model="properties.message"
+      :class="$style.message"
       placeholder="edit me">
   
     <p>Message is: {{ properties.message }}</p>

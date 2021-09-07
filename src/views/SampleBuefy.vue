@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.component">
-    <BuefyParts/>
+    <BuefyParts />
   </div>
 </template>
 

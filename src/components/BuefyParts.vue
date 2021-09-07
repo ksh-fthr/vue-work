@@ -7,7 +7,7 @@
       <b-field label="Select a date">
         <b-datepicker
           placeholder="Click to select..."
-          icon="calendar-today"/>
+          icon="calendar-today" />
       </b-field>
     </div>
     <div 
@@ -23,7 +23,7 @@
         <b-modal 
           :active.sync="isComponentModalActive" 
           has-modal-card>
-          <modal-form v-bind="formProps"/>
+          <modal-form v-bind="formProps" />
         </b-modal>
       </section>
     </div>

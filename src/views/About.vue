@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.component">
     <h1>This is an about page</h1>
-    <Collapse/>
+    <Collapse />
   </div>
 </template>
 

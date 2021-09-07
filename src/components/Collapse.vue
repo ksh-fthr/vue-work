@@ -1,10 +1,11 @@
 <template>
   <section>
-
     <b-collapse :open="false">
       <button 
         slot="trigger" 
-        class="button is-primary">Click me!</button>
+        class="button is-primary">
+        Click me!
+      </button>
       <div class="notification">
         <div class="content">
           <h3>Subtitle</h3>
@@ -16,7 +17,6 @@
         </div>
       </div>
     </b-collapse>
-
   </section>
 </template>
 
