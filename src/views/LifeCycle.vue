@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Lifecycle',
+  name: 'LifeCycle',
   data: function() {
     return {
       properties: {

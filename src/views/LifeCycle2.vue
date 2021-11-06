@@ -32,7 +32,7 @@ import Lifecycle21 from '@/components/LifeCycle2-1.vue'
 import Lifecycle22 from '@/components/LifeCycle2-2.vue'
 
 export default {
-  name: 'Lifecycle2',
+  name: 'LifeCycle2',
   components: {
     Lifecycle21,
     Lifecycle22
