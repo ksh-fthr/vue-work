@@ -1,32 +1,77 @@
 module.exports = {
   env: {
-    es2015: true,
+    es2017: true,
     node: true,
   },
-  plugins: ['vue'],
-  extends: ['eslint:recommended', 'plugin:vue/recommended', 'prettier'],
+  plugins: [
+    'vue'
+  ],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/recommended',
+    'prettier'
+  ],
   rules: {
-    'vue/html-closing-bracket-newline': [2, { multiline: 'never' }],
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        multiline: 'never'
+      }
+    ],
     'no-extra-parens': 1,
-    'no-multi-spaces': 2,
-    'no-multiple-empty-lines': [2, { max: 1 }],
-    'func-call-spacing': [2, 'never'],
-    'no-unneeded-ternary': 2,
-    semi: [2, 'never'],
-    quotes: [2, 'single'],
-    'no-var': 2,
-    indent: [2, 2],
-    'space-in-parens': [2, 'never'],
+    'no-multi-spaces': 'error',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1
+      }
+    ],
+    'func-call-spacing': [
+      'error',
+      'never'
+    ],
+    'no-unneeded-ternary': 'error',
+    'semi': [
+      'error',
+      'never'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'no-var': 'error',
+    'indent': [
+      'error',
+      2
+    ],
+    'space-in-parens': [
+      'error',
+      'never'
+    ],
+    'space-before-function-paren': [
+      'error',
+      'never'
+    ],    
     'no-console': 0,
-    'comma-spacing': 2,
-    'computed-property-spacing': 2,
-    'key-spacing': 2,
-    'keyword-spacing': 2
+    'comma-spacing': 'error',
+    'computed-property-spacing': 'error',
+    'key-spacing': 'error',
+    'keyword-spacing': [
+      'error',
+      {
+        'before': true,
+        'after': true 
+      }
+    ],
+    'eol-last': [
+      'error',
+      'always'
+    ]
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: 'espree',
-    ecmaVersion: 2015,
+    ecmaVersion: 2017,
     sourceType: 'module'
   }
 }
