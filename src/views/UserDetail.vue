@@ -29,7 +29,7 @@
 <script>
 export default {
   name: 'UserDetail',
-  data: function () {
+  data: function() {
     // 返却するオブジェクト users は本コンポーネントで表示するユーザ情報
     // 本来ならば DB 等で保持するのだが、今回は記事用のサンプルコードということでリストで持たせている
     return {

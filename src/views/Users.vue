@@ -14,7 +14,7 @@ export default {
   components: {
     UserList
   },
-  data: function () {
+  data: function() {
     // ここで返却するデータは子コンポーネント `UserList.vue` で表示するユーザ情報
     // 本来ならば DB 等で保持するのだが、今回は記事用のサンプルコードということでリストで持たせている
     return {
