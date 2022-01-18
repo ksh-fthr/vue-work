@@ -29,9 +29,9 @@
     "buefy": "0.9.11",
     "eslint": "7.31.0",
     "eslint-config-prettier": "8.3.0",
+    "eslint-config-vue": "2.0.2",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.0.3",
-    "eslint-config-vue": "2.0.2",
-    "webpack-dev-server": "4.4.0"
+    "webpack-dev-server": "^4.7.3"
   }
 }
