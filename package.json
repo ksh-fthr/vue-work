@@ -6,7 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc-conf.json"
+    "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc-conf.json",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
   },
   "dependencies": {
     "@vue/test-utils": "1.0.0-beta.25",
