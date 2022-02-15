@@ -10,8 +10,10 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
+    "postcss": "^8.4.6",
     "glob-parent": "^5.1.2",
-    "node-forge": "^1.0.0"
+    "node-forge": "^1.0.0",
+    "nth-check": "^2.0.1"
   },
   "dependencies": {
     "@vue/test-utils": "1.0.0-beta.25",
@@ -41,8 +43,6 @@
     "eslint-plugin-vue": "8.0.3",
     "markdown-it": "12.3.2",
     "marked": "4.0.10",
-    "node-forge": "^1.0.0",
-    "postcss": "^8.4.6",
     "webpack-dev-server": "^4.7.3"
   }
 }
