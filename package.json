@@ -10,7 +10,8 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
-    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
+    "glob-parent": "^5.1.2",
+    "node-forge": "^1.0.0"
   },
   "dependencies": {
     "@vue/test-utils": "1.0.0-beta.25",
@@ -24,7 +25,10 @@
     "vue-loader": "^17.0.0",
     "vue-router": "3.5.3",
     "vue-template-compiler": "2.6.14",
-    "vuex": "3.6.2"
+    "vuex": "3.6.2",
+    "ansi-html-community": "0.0.8",
+    "ansi-regex": "^6.0.1",
+    "postcss": ">=8.2.13"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.5.15",
