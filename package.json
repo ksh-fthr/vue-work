@@ -21,7 +21,6 @@
     "jest": "27.3.1",
     "jsdoc": "^3.6.10",
     "jsdoc-vuejs": "4.0.0",
-    "postcss": ">=8.2.13",
     "serialize-javascript": "6.0.0",
     "vue": "2.6.14",
     "vue-eslint-parser": "8.0.1",
@@ -40,11 +39,10 @@
     "eslint-config-vue": "2.0.2",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.0.3",
-    "webpack-dev-server": "^4.7.3",
-    "node-forge": "1.0.0",
-    "nth-check": ">=2.0.1",
     "markdown-it": "12.3.2",
     "marked": "4.0.10",
-    "postcss": "8.2.13"
+    "node-forge": "^1.0.0",
+    "postcss": "^8.4.6",
+    "webpack-dev-server": "^4.7.3"
   }
 }
