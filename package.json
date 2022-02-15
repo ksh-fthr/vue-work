@@ -10,9 +10,8 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
-    "postcss": "^8.4.6",
-    "glob-parent": "^5.1.2",
-    "node-forge": "^1.0.0",
+    "glob-parent": "^6.0.2",
+    "node-forge": "^1.2.1",
     "nth-check": "^2.0.1"
   },
   "dependencies": {
@@ -23,6 +22,7 @@
     "jest": "27.3.1",
     "jsdoc": "^3.6.10",
     "jsdoc-vuejs": "4.0.0",
+    "postcss": "^8.4.6",
     "serialize-javascript": "6.0.0",
     "vue": "2.6.14",
     "vue-eslint-parser": "8.0.1",
