@@ -1,6 +1,35 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  },
+  "assigneesSampleSize": 2,
+  "reviewersSampleSize": 1,
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    "before 3am on Monday"
+  ],
   "extends": [
-    "config:base"
+    "config:base",
+    "group:allNonMajor"
+  ],
+  "labels": ["dependenciese"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"]
+    },
+    {
+      "matchPackagePatterns": ["vue"],
+      "labels": ["vue.js"]
+    },
+    {
+      "matchPackagePatterns": ["buefy"],
+      "labels": ["ui-library"]
+    }
   ]
 }
