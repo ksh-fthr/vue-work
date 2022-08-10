@@ -10,16 +10,19 @@
   "reviewersSampleSize": 1,
   "packageRules": [
     {
-      "matchDepTypes": [
-        "dependencies",
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchPackagePatterns": ["*vue*"],
+      "groupName": "vue",
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchPackagePatterns": ["eslint*"],
+      "groupName": "eslint",
       "automerge": true
     }
   ]
