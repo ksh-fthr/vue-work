@@ -1,35 +1,52 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "vulnerabilityAlerts": {
-    "labels": ["security"]
-  },
-  "assigneesSampleSize": 2,
-  "reviewersSampleSize": 1,
-  "timezone": "Asia/Tokyo",
-  "schedule": [
-    "before 3am on Monday"
-  ],
   "extends": [
     "config:base",
     "group:allNonMajor"
   ],
-  "labels": ["dependenciese"],
+  "dependencyDashboard": false,
+  "automerge": true,
+  "timezone": "Asia/Tokyo",
+  "assigneesSampleSize": 2,
+  "reviewersSampleSize": 1,
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ]
+  },
+  "labels": [
+    "dependenciese"
+  ],
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"]
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "labels": [
+        "linting"
+      ]
     },
     {
-      "matchPackagePatterns": ["vue"],
-      "labels": ["vue.js"]
+      "matchPackagePatterns": [
+        "vue"
+      ],
+      "labels": [
+        "vue.js"
+      ]
     },
     {
-      "matchPackagePatterns": ["buefy"],
-      "labels": ["ui-library"]
+      "matchPackagePatterns": [
+        "buefy"
+      ],
+      "labels": [
+        "ui-library"
+      ]
     }
   ]
 }
