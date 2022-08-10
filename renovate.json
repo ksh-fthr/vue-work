@@ -5,48 +5,22 @@
     "group:allNonMajor"
   ],
   "dependencyDashboard": false,
-  "automerge": true,
   "timezone": "Asia/Tokyo",
   "assigneesSampleSize": 2,
   "reviewersSampleSize": 1,
-  "vulnerabilityAlerts": {
-    "labels": [
-      "security"
-    ]
-  },
-  "labels": [
-    "dependenciese"
-  ],
   "packageRules": [
     {
       "matchDepTypes": [
+        "dependencies",
         "devDependencies"
       ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true
-    },
-    {
-      "matchPackagePatterns": [
-        "eslint"
-      ],
-      "labels": [
-        "linting"
-      ]
-    },
-    {
-      "matchPackagePatterns": [
-        "vue"
-      ],
-      "labels": [
-        "vue.js"
-      ]
-    },
-    {
-      "matchPackagePatterns": [
-        "buefy"
-      ],
-      "labels": [
-        "ui-library"
-      ]
     }
   ]
 }
