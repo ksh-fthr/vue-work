@@ -15,13 +15,13 @@
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackagePatterns": ["*vue*"],
+      "matchPackagePatterns": ["vue"],
       "groupName": "vue",
       "automerge": true
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackagePatterns": ["eslint*"],
+      "matchPackagePatterns": ["eslint"],
       "groupName": "eslint",
       "automerge": true
     }
