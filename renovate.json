@@ -7,6 +7,7 @@
   "dependencyDashboard": false,
   "timezone": "Asia/Tokyo",
   "schedule": "every 1 hour after 00:00 and before 23:59 every day",
+  "automerge-schedule": "every 1 hour after 00:00 and before 23:59 every day",
   "assigneesSampleSize": 2,
   "reviewersSampleSize": 1,
   "packageRules": [
