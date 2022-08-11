@@ -6,6 +6,7 @@
   ],
   "dependencyDashboard": false,
   "timezone": "Asia/Tokyo",
+  "schedule": ["every 1 hour"],
   "assigneesSampleSize": 2,
   "reviewersSampleSize": 1,
   "packageRules": [
