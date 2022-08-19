@@ -15,11 +15,11 @@
     "jsdoc": "3.6.11",
     "jsdoc-vuejs": "4.0.0",
     "serialize-javascript": "6.0.0",
-    "vue": "2.7.8",
+    "vue": "2.7.9",
     "vue-eslint-parser": "8.3.0",
     "vue-loader": "15.10.0",
     "vue-router": "3.5.4",
-    "vue-template-compiler": "2.7.8",
+    "vue-template-compiler": "2.7.9",
     "vuex": "3.6.2"
   },
   "devDependencies": {
