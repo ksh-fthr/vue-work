@@ -33,6 +33,6 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-vue": "9.5.1",
     "postcss": "8.4.16",
-    "webpack-dev-server": "4.11.0"
+    "webpack-dev-server": "4.11.1"
   }
 }
