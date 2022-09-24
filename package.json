@@ -27,7 +27,7 @@
     "@vue/cli-plugin-eslint": "5.0.8",
     "@vue/cli-service": "5.0.8",
     "buefy": "0.9.22",
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-vue": "2.0.2",
     "eslint-plugin-prettier": "4.2.1",
