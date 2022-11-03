@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Users from './views/Users.vue'
-import SampleBuefy from './views/SampleBuefy.vue'
 import LifeCycle from './views/LifeCycle.vue'
 import LifeCycle2 from './views/LifeCycle2.vue'
 import UserDetail from './views/UserDetail.vue'
@@ -25,11 +24,6 @@ export default new Router({
       path: '/routing',
       name: 'routing',
       component: Routing 
-    },
-    {
-      path: '/sample-buefy',
-      name: 'samle-buefy',
-      component: SampleBuefy
     },
     {
       path: '/life-cycle',
