@@ -15,11 +15,6 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/sample-buefy">
-            Sample Buefy
-          </router-link>
-        </li>
-        <li>
           <router-link to="/life-cycle">
             Life Cycle
           </router-link>
