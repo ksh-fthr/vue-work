@@ -19,6 +19,14 @@ export default {
     // 本来ならば DB 等で保持するのだが、今回は記事用のサンプルコードということでリストで持たせている
     return {
       properties: {
+        headers: [
+          'id',
+          'name',
+          'live',
+          'phone',
+          'gender',
+          'mail',
+        ],
         users: [
           {
             id: 1,
