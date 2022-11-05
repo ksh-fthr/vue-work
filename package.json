@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vite",
     "build": "vite build",
-    "lint": "eslint lint src",
+    "lint": "eslint --fix 'src/*.{js, vue}' && eslint --fix 'src/**/*.{js, vue}'",
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc-conf.json"
   },
   "dependencies": {
@@ -24,8 +24,10 @@
     "@babel/eslint-parser": "^7.12.16",
     "@vitejs/plugin-vue": "^3.2.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^8.0.3",
-    "vite": "^3.2.2"
+    "vite": "^3.2.2",
+    "vue-eslint-parser": "^9.1.0"
   },
   "eslintConfig": {
     "root": true,

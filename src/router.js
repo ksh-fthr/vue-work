@@ -6,7 +6,6 @@ import LifeCycle2 from './views/LifeCycle2.vue'
 import UserDetail from './views/UserDetail.vue'
 import Routing from './views/Routing.vue'
 
-
 const routes = [
   {
     path: '/',
