@@ -53,7 +53,7 @@ v3.x の実装ブランチで扱っている各ツールのバージョンは以
 | node    | 18.12.0 | `node -v` で確認    |
 | Vue     | ^3.1.0  | package.json で指定 |
 | Vue CLI | 5.0.8   | `vue -V` で確認     |
-| Vite    | ^3.2.2  | packave.json で指定 |
+| Vite    | ^3.2.2  | package.json で指定 |
 
 # setup
 
