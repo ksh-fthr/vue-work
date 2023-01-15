@@ -14,7 +14,7 @@
     "jest": "27.5.1",
     "jsdoc": "3.6.11",
     "jsdoc-vuejs": "4.0.0",
-    "serialize-javascript": "6.0.0",
+    "serialize-javascript": "6.0.1",
     "vue": "^3.2.13",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0"
