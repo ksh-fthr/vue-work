@@ -9,7 +9,7 @@
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc-conf.json"
   },
   "dependencies": {
-    "axios": "0.28.1",
+    "axios": "0.29.0",
     "core-js": "^3.8.3",
     "jest": "27.5.1",
     "jsdoc": "3.6.11",
